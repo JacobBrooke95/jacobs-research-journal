@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Jacob's Research Journal</title>
     <link>https://jacobbrooke95.github.io/jacobs-research-journal/</link>
-    <description>Long-form notes on AI, technology, public systems, and the tools we use to think with. Written by Jacob Brooke in Jefferson City, MO.</description>
+    <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <managingEditor>jacob@example.com (Jacob Brooke)</managingEditor>
-    <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 09:00:00 +0000</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
-    <image>
-      <url>https://jacobbrooke95.github.io/jacobs-research-journal/favicon.png</url>
-      <title>Jacob's Research Journal</title>
-      <link>https://jacobbrooke95.github.io/jacobs-research-journal/</link>
-    </image>
 
     <item>
-      <title>Gemma 4 Is Google's Most Interesting Open Model Yet</title>
-      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html</link>
-      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html</guid>
-      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
-      <author>jacob@example.com (Jacob Brooke)</author>
+      <title>Google's Gemma 4: What Actually Matters</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/gemma-4-deep-dive.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/gemma-4-deep-dive.html</guid>
+      <pubDate>Sat, 04 Apr 2026 09:00:00 +0000</pubDate>
       <category>AI</category>
-      <description><![CDATA[Google's Gemma 4 family lands with a true Apache 2.0 license, a first-ever MoE architecture, audio support on edge models, and benchmarks that are competitive — if not quite dominant. Here's what it actually means.]]></description>
+      <description><![CDATA[Google dropped Gemma 4 on April 2nd with Apache 2.0 licensing — and that legal change may matter more than any benchmark. A deep look at the model family, architecture innovations, Mac setup, and an honest read of where it actually stands vs. Qwen, Llama 4, and the Chinese open-model pack.]]></description>
       <content:encoded><![CDATA[
-        <p>The thing that caught my eye about Gemma 4 wasn't a benchmark number. It was a license. Apache 2.0 — genuinely, with no asterisks, no carve-outs, no "harmful use" policy clause that gives Google a backdoor to revoke access if you become a competitor.</p>
-        <p>It dropped on April 2nd, 2026. Four models, across two different design philosophies, with technical depth that rewards reading the architecture paper.</p>
-        <p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html">Read the full post →</a></p>
+<p>Google dropped Gemma 4 on April 2nd, and for once the open-weights release cycle is moving faster than the hype cycle can catch up. I've spent the last couple days working through the technical docs, running the models locally, and reading the community reaction. Here's what I actually think.</p>
+
+<p>The thing that caught my eye about Gemma 4 wasn't a benchmark number. It was a license. Apache 2.0 — genuinely, with no asterisks, no carve-outs. Previous Gemma versions shipped with a custom Terms of Use that included monthly active user caps and acceptable-use restrictions. That pushed commercial teams toward Mistral, Qwen, and Llama instead. Apache 2.0 removes the friction entirely.</p>
+
+<h2>The Lineup</h2>
+<p>Four models, two tiers. The edge tier (E2B at 2.3B effective / 5.1B total, E4B at 4.5B effective / 8.0B total) targets on-device deployment with 128K context. The workstation tier (26B MoE with 4B active parameters, 31B Dense) targets server and desktop with 256K context. The "E" stands for "effective" — Google's shorthand for Per-Layer Embeddings, a technique that gives small models representational depth well beyond their parameter count.</p>
+
+<h2>Architecture</h2>
+<p>Three innovations worth understanding: alternating attention (local sliding-window + global full-context, more efficient than dense full attention throughout), dual RoPE (standard for local layers, Proportional RoPE for global, enabling reliable long-context performance), and built-in multimodal encoders (vision across all models, audio on the edge variants).</p>
+
+<h2>Benchmarks</h2>
+<p>The 31B Dense scores well: MMLU Pro 85.2%, GPQA Diamond 84.3%, Arena ELO ~1452 (#3 among open models). The 26B MoE at only 4B active parameters holds an ELO of ~1441 — impressive efficiency. But the speed problem is real: 11 tokens/sec where Qwen 3.5 does 60+. On aggregate benchmarks, Chinese open models (Qwen 3.5, GLM-5, Kimi K2.5) remain competitive or slightly ahead.</p>
+
+<h2>Running on Mac</h2>
+<p>The E4B quantized to GGUF is ~9.6GB — comfortably fits a Mac mini M4. <code>ollama run gemma4:e4b</code> is the easiest entry point. The 26B MoE at 18GB fits a Mac Studio M3 Ultra.</p>
+
+<h2>Bottom Line</h2>
+<p>The Apache 2.0 license change is the real story. If you avoided Gemma because of the terms: reconsider. If you're evaluating for a new project: test the 26B MoE, but benchmark inference speed on your hardware first. The open-weights frontier in April 2026 is genuinely competitive — that's the actual story here.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/gemma-4-deep-dive.html">Read the full post →</a></p>
       ]]></content:encoded>
     </item>
 
