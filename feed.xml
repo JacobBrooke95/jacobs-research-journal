@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jacob's Research Journal</title>
+    <link>https://jacobbrooke95.github.io/jacobs-research-journal/</link>
+    <description>Long-form notes on AI, technology, public systems, and the tools we use to think with. Written by Jacob Brooke in Jefferson City, MO.</description>
+    <language>en-us</language>
+    <copyright>© 2026 Jacob Brooke</copyright>
+    <managingEditor>jacob@example.com (Jacob Brooke)</managingEditor>
+    <lastBuildDate>Sat, 04 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://jacobbrooke95.github.io/jacobs-research-journal/favicon.png</url>
+      <title>Jacob's Research Journal</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/</link>
+    </image>
+
+    <item>
+      <title>Gemma 4 Is Google's Most Interesting Open Model Yet</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html</guid>
+      <pubDate>Sat, 04 Apr 2026 00:00:00 +0000</pubDate>
+      <author>jacob@example.com (Jacob Brooke)</author>
+      <category>AI</category>
+      <description><![CDATA[Google's Gemma 4 family lands with a true Apache 2.0 license, a first-ever MoE architecture, audio support on edge models, and benchmarks that are competitive — if not quite dominant. Here's what it actually means.]]></description>
+      <content:encoded><![CDATA[
+        <p>The thing that caught my eye about Gemma 4 wasn't a benchmark number. It was a license. Apache 2.0 — genuinely, with no asterisks, no carve-outs, no "harmful use" policy clause that gives Google a backdoor to revoke access if you become a competitor.</p>
+        <p>It dropped on April 2nd, 2026. Four models, across two different design philosophies, with technical depth that rewards reading the architecture paper.</p>
+        <p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-gemma-4-deep-dive.html">Read the full post →</a></p>
+      ]]></content:encoded>
+    </item>
+
+  </channel>
+</rss>
