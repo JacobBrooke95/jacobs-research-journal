@@ -86,6 +86,11 @@
 
           <p>The short version: Gemma 4 is a genuinely capable model family. But the headline isn't a benchmark number. It's a license. Apache 2.0 — no asterisks, no carve-outs, no monthly active user cap tucked into a Terms of Use PDF. That's the thing that will matter in six months, not whether the 31B scores 0.3 points higher than Qwen on GPQA Diamond.</p>
 
+          <figure>
+            <img src="../images/gemma4-hero.png" alt="Google Gemma 4 official announcement graphic from Google Blog" style="width:100%;border-radius:8px;">
+            <figcaption>Gemma 4 — announced April 2nd, 2026. Source: Google Blog.</figcaption>
+          </figure>
+
           <h2>The Lineup</h2>
 
           <p>Four models, two design philosophies. Google calls them the edge tier and the workstation tier, and the distinction is real — these aren't just different sizes of the same thing.</p>
@@ -115,6 +120,11 @@
           <p>The 26B model is a Mixture of Experts architecture with only 4 billion parameters active during inference. You get the quality of a large model at the compute cost of a much smaller one — in theory. (More on the catch in a moment.)</p>
 
           <p>Two notable absences: there's no replacement for Gemma 3's popular 12B, leaving an awkward gap between ~4.5B effective and 26B. And the rumored 120B flagship that pre-release chatter had anticipated didn't materialize at launch. Make of that what you will.</p>
+
+          <figure>
+            <img src="../images/gemma4-benchmark-perf-vs-size.png" alt="Gemma 4 model performance vs size comparison chart from Hugging Face" style="width:100%;border-radius:8px;">
+            <figcaption>Performance vs. model size across all four Gemma 4 variants. Source: Hugging Face Blog.</figcaption>
+          </figure>
 
           <h2>The Architecture Worth Understanding</h2>
 
@@ -157,6 +167,11 @@
           </div>
 
           <p>On <a href="https://lmarena.ai">LMArena</a> — human preference rankings rather than automated benchmarks — the 31B Dense sits at roughly #3 among open models with an ELO around 1452. That puts it ahead of Llama 4 Maverick, which has hundreds of billions of total parameters. The 26B MoE holds an ELO of ~1441 with only 4B parameters active. These are legitimately good numbers.</p>
+
+          <figure>
+            <img src="../images/gemma4-arena-elo-comparison.png" alt="Gemma 4 Arena ELO leaderboard ranking comparison chart" style="width:100%;border-radius:8px;">
+            <figcaption>Arena ELO leaderboard positioning Gemma 4 31B at #3 among open models. Source: Hugging Face Blog.</figcaption>
+          </figure>
 
           <p>But here's where the honest part comes in.</p>
 
@@ -215,6 +230,11 @@ mlx_vlm.generate \
           </ul>
 
           <h2>What Actually Matters Here</h2>
+
+          <figure>
+            <img src="../images/gemma4-elo-benchmark.svg" alt="Gemma 4 Arena ELO score vs model size benchmark chart from Google DeepMind" style="width:100%;border-radius:8px;background:#fff;padding:8px;">
+            <figcaption>ELO score vs. model size — Gemma 4 plotted against competitors. Source: Google DeepMind.</figcaption>
+          </figure>
 
           <p>Let me be direct about something: the Apache 2.0 license is the most important thing that happened on April 2nd. Not the benchmarks, not the architecture paper, not the MoE design.</p>
 

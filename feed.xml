@@ -19,24 +19,111 @@
       <category>AI</category>
       <description><![CDATA[Google dropped Gemma 4 on April 2nd with Apache 2.0 licensing — and that legal change may matter more than any benchmark. A deep look at the model family, architecture innovations, Mac setup, and an honest read of where it actually stands vs. Qwen, Llama 4, and the Chinese open-model pack.]]></description>
       <content:encoded><![CDATA[
-<p>Google dropped Gemma 4 on April 2nd, and for once the open-weights release cycle is moving faster than the hype cycle can catch up. I've spent the last couple days working through the technical docs, running the models locally, and reading the community reaction. Here's what I actually think.</p>
+<p>Google dropped Gemma 4 on April 2nd, and for once the open-weights release cycle is moving faster than the hype cycle can catch up. I've spent the last couple of days working through the technical docs, running the models locally, and reading the community reaction. Here's what I actually think.</p>
 
-<p>The thing that caught my eye about Gemma 4 wasn't a benchmark number. It was a license. Apache 2.0 — genuinely, with no asterisks, no carve-outs. Previous Gemma versions shipped with a custom Terms of Use that included monthly active user caps and acceptable-use restrictions. That pushed commercial teams toward Mistral, Qwen, and Llama instead. Apache 2.0 removes the friction entirely.</p>
+<p>The short version: Gemma 4 is a genuinely capable model family. But the headline isn't a benchmark number. It's a license. Apache 2.0 — no asterisks, no carve-outs, no monthly active user cap tucked into a Terms of Use PDF. That's the thing that will matter in six months, not whether the 31B scores 0.3 points higher than Qwen on GPQA Diamond.</p>
+
+<figure>
+  <img src="https://jacobbrooke95.github.io/jacobs-research-journal/images/gemma4-hero.png" alt="Google Gemma 4 official announcement graphic from Google Blog" style="width:100%;border-radius:8px;">
+  <figcaption>Gemma 4 — announced April 2nd, 2026. Source: Google Blog.</figcaption>
+</figure>
 
 <h2>The Lineup</h2>
-<p>Four models, two tiers. The edge tier (E2B at 2.3B effective / 5.1B total, E4B at 4.5B effective / 8.0B total) targets on-device deployment with 128K context. The workstation tier (26B MoE with 4B active parameters, 31B Dense) targets server and desktop with 256K context. The "E" stands for "effective" — Google's shorthand for Per-Layer Embeddings, a technique that gives small models representational depth well beyond their parameter count.</p>
 
-<h2>Architecture</h2>
-<p>Three innovations worth understanding: alternating attention (local sliding-window + global full-context, more efficient than dense full attention throughout), dual RoPE (standard for local layers, Proportional RoPE for global, enabling reliable long-context performance), and built-in multimodal encoders (vision across all models, audio on the edge variants).</p>
+<p>Four models, two design philosophies. Google calls them the edge tier and the workstation tier, and the distinction is real — these aren't just different sizes of the same thing.</p>
 
-<h2>Benchmarks</h2>
-<p>The 31B Dense scores well: MMLU Pro 85.2%, GPQA Diamond 84.3%, Arena ELO ~1452 (#3 among open models). The 26B MoE at only 4B active parameters holds an ELO of ~1441 — impressive efficiency. But the speed problem is real: 11 tokens/sec where Qwen 3.5 does 60+. On aggregate benchmarks, Chinese open models (Qwen 3.5, GLM-5, Kimi K2.5) remain competitive or slightly ahead.</p>
+<table>
+  <thead>
+    <tr><th>Model</th><th>Effective Params</th><th>Total Params</th><th>Context</th><th>Target</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Gemma 4 E2B</td><td>2.3B</td><td>5.1B</td><td>128K</td><td>On-device</td></tr>
+    <tr><td>Gemma 4 E4B</td><td>4.5B</td><td>8.0B</td><td>128K</td><td>On-device</td></tr>
+    <tr><td>Gemma 4 26B A4B</td><td>4B active</td><td>26B (MoE)</td><td>256K</td><td>Workstation/server</td></tr>
+    <tr><td>Gemma 4 31B Dense</td><td>31B</td><td>31B</td><td>256K</td><td>Workstation/server</td></tr>
+  </tbody>
+</table>
 
-<h2>Running on Mac</h2>
-<p>The E4B quantized to GGUF is ~9.6GB — comfortably fits a Mac mini M4. <code>ollama run gemma4:e4b</code> is the easiest entry point. The 26B MoE at 18GB fits a Mac Studio M3 Ultra.</p>
+<p>The "E" in E2B and E4B stands for "effective" — Google's shorthand for Per-Layer Embeddings (PLE). Rather than one embedding table at the input, PLE adds a residual signal into every decoder layer, giving small models representational depth well beyond their actual weight count.</p>
+
+<p>Two notable absences: there's no replacement for Gemma 3's popular 12B, leaving an awkward gap between ~4.5B effective and 26B. And the rumored 120B flagship didn't materialize at launch.</p>
+
+<figure>
+  <img src="https://jacobbrooke95.github.io/jacobs-research-journal/images/gemma4-benchmark-perf-vs-size.png" alt="Gemma 4 model performance vs size comparison chart from Hugging Face" style="width:100%;border-radius:8px;">
+  <figcaption>Performance vs. model size across all four Gemma 4 variants. Source: Hugging Face Blog.</figcaption>
+</figure>
+
+<h2>The Architecture Worth Understanding</h2>
+
+<h3>Alternating Attention</h3>
+<p>Rather than running full attention through every layer, Gemma 4 alternates between local sliding-window attention (512-token windows on smaller models, 1024-token on larger ones) and global full-context attention. This is substantially more compute-efficient than dense full attention — it's how you get to 256K context windows without proportional cost blowup.</p>
+
+<h3>Dual RoPE</h3>
+<p>Standard rotary positional embeddings for local attention layers; Proportional RoPE (p-RoPE) for global layers. The combination enables reliably useful performance at 256K tokens rather than just nominally supporting it.</p>
+
+<h3>Built-in Multimodal</h3>
+<p>Vision support is native across all four models — not a separate variant, baked into the base architecture. The vision encoder uses learned 2D positions with multi-dimensional RoPE and a configurable image token budget (70 to 1120 tokens). Audio support (via a USM-style conformer encoder) is available in the edge models.</p>
+
+<h2>The Benchmarks: An Honest Read</h2>
+
+<table>
+  <thead>
+    <tr><th>Benchmark</th><th>31B Dense</th><th>26B A4B</th><th>E4B</th><th>E2B</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>MMLU Pro</td><td>85.2%</td><td>82.6%</td><td>69.4%</td><td>60.0%</td></tr>
+    <tr><td>GPQA Diamond</td><td>84.3%</td><td>82.3%</td><td>58.6%</td><td>43.4%</td></tr>
+    <tr><td>AIME 2026</td><td>89.2%</td><td>88.3%</td><td>42.5%</td><td>37.5%</td></tr>
+    <tr><td>LiveCodeBench v6</td><td>80.0%</td><td>77.1%</td><td>52.0%</td><td>44.0%</td></tr>
+    <tr><td>MMMU Pro (vision)</td><td>76.9%</td><td>73.8%</td><td>52.6%</td><td>44.2%</td></tr>
+  </tbody>
+</table>
+
+<p>On LMArena, the 31B Dense sits at roughly #3 among open models with an ELO around 1452. The 26B MoE holds an ELO of ~1441 with only 4B parameters active. These are legitimately good numbers.</p>
+
+<figure>
+  <img src="https://jacobbrooke95.github.io/jacobs-research-journal/images/gemma4-arena-elo-comparison.png" alt="Gemma 4 Arena ELO leaderboard ranking comparison chart" style="width:100%;border-radius:8px;">
+  <figcaption>Arena ELO leaderboard positioning Gemma 4 31B at #3 among open models. Source: Hugging Face Blog.</figcaption>
+</figure>
+
+<p><strong>The speed problem is real.</strong> Community benchmarks show the 26B MoE at roughly 11 tokens/sec on hardware where Qwen 3.5 35B runs at 60+. That's a 5x difference users feel on every request.</p>
+
+<p><strong>Chinese models remain competitive.</strong> Qwen 3.5, GLM-5, and Kimi K2.5 are at or slightly ahead on aggregate automated benchmarks. Where Gemma 4 genuinely wins: non-English multilingual tasks and human preference evaluations.</p>
+
+<p><strong>The 256K context window has caveats.</strong> Practically reaching the full window requires substantial VRAM headroom — benchmark on your specific hardware before building on it.</p>
+
+<h2>Running It on Your Mac</h2>
+
+<p>The E4B quantized to GGUF is ~9.6GB — comfortably fits a Mac mini M4 or any recent MacBook Pro.</p>
+
+<pre><code># Edge models — audio and vision included
+ollama run gemma4:e2b      # ~5.5GB
+ollama run gemma4:e4b      # ~9.6GB
+
+# Workstation models
+ollama run gemma4:26b      # ~18GB, MoE
+ollama run gemma4:31b      # ~20GB, dense</code></pre>
+
+<p>On Apple Silicon, Ollama automatically routes through Apple's MLX framework. Hardware guidance: MacBook Pro M3 (18–36GB) handles E4B well; Mac Studio M3 Ultra handles all four variants comfortably.</p>
+
+<h2>What Actually Matters Here</h2>
+
+<figure>
+  <img src="https://jacobbrooke95.github.io/jacobs-research-journal/images/gemma4-elo-benchmark.svg" alt="Gemma 4 Arena ELO score vs model size benchmark chart from Google DeepMind" style="width:100%;border-radius:8px;background:#fff;padding:8px;">
+  <figcaption>ELO score vs. model size — Gemma 4 plotted against competitors. Source: Google DeepMind.</figcaption>
+</figure>
+
+<p>The Apache 2.0 license is the most important thing that happened on April 2nd. Previous Gemma versions shipped with a custom Terms of Use including monthly active user caps — a procurement headache that quietly pushed commercial teams toward Mistral, Qwen, and Llama. Apache 2.0 removes all of that. No MAU caps, no restrictions, no royalties. Commercial teams can now build on Gemma the same way they build on Llama — fully, without reservation.</p>
+
+<p>There's also a geopolitical angle: enterprise procurement and security teams are increasingly preferring US-origin AI models over Chinese providers for compliance and data governance reasons that have nothing to do with benchmark rankings. Gemma 4 being strong, Apache-licensed, and US-origin is useful positioning no benchmark table captures.</p>
 
 <h2>Bottom Line</h2>
-<p>The Apache 2.0 license change is the real story. If you avoided Gemma because of the terms: reconsider. If you're evaluating for a new project: test the 26B MoE, but benchmark inference speed on your hardware first. The open-weights frontier in April 2026 is genuinely competitive — that's the actual story here.</p>
+
+<p><strong>If you avoided Gemma because of the license:</strong> reconsider. Apache 2.0 removes the blocker entirely.</p>
+
+<p><strong>If you're evaluating open models for a new project:</strong> test the 26B MoE — impressive efficiency profile — but benchmark inference speed on your hardware first. The 11 token/sec community reports are concerning enough to verify.</p>
+
+<p><strong>If you're looking for raw benchmark supremacy:</strong> the picture is mixed. The open-weights frontier in April 2026 is a close and genuinely competitive pack. That's the actual story here.</p>
 
 <p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/gemma-4-deep-dive.html">Read the full post →</a></p>
       ]]></content:encoded>
