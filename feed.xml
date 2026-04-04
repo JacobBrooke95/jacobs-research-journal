@@ -8,8 +8,26 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Sat, 04 Apr 2026 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 16:45:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>When Will Claude Mythos Ship? An Evidence-Based Prediction</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-mythos-release-prediction.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-mythos-release-prediction.html</guid>
+      <pubDate>Sat, 04 Apr 2026 16:45:00 -0500</pubDate>
+      <category>AI</category>
+      <description><![CDATA[Anthropic's Claude Mythos leaked on March 26 via a CMS misconfiguration. Analyzing release cadence, Code with Claude 2026 dates, infrastructure signals, and competitive pressure to build a falsifiable prediction for when it ships.]]></description>
+      <content:encoded><![CDATA[
+<p>On March 26, a CMS misconfiguration exposed ~3,000 unpublished Anthropic blog posts in a public data cache. Inside those drafts: detailed documentation for Claude Mythos, an internal codename Capybara — a fourth tier of Claude sitting above Opus with "dramatically higher scores" on coding, reasoning, and especially cybersecurity benchmarks.</p>
+
+<p>Anthropic confirmed it was real. Fortune got them on record calling Mythos "the most capable we've built to date" and "a step change in capabilities." The question everyone's asking now: when does it actually ship?</p>
+
+<p>I spent the last week pulling every available signal — release history, marketing strategy, infrastructure timelines, competitive pressure, and some interesting Reddit signals — to build a falsifiable prediction. The short answer: <strong>May 6, 2026 at Code with Claude San Francisco, with phased rollout through June.</strong> Confidence level: 65%.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-04-mythos-release-prediction.html">Read the full post →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>Google's Gemma 4: What Actually Matters</title>
