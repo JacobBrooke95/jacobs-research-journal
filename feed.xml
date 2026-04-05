@@ -8,8 +8,26 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Sat, 04 Apr 2026 16:45:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2026 09:00:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>WWDC 2026 Preview: What's Actually Coming June 8th</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-05-wwdc-2026-preview.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-05-wwdc-2026-preview.html</guid>
+      <pubDate>Sun, 05 Apr 2026 09:00:00 -0500</pubDate>
+      <category>Apple</category>
+      <description><![CDATA[Sixty-four days out from WWDC, the picture is coming into focus. Siri's billion-dollar Gemini makeover, the Snow Leopard strategy for iOS 27, Core AI for developers, and the hardware wildcards — sourced and rated by confidence.]]></description>
+      <content:encoded><![CDATA[
+<p>Apple confirmed it two weeks ago: WWDC 2026 runs June 8 through 12, with the keynote kicking off Monday morning at Apple Park. On paper, it's the same format we've seen since 2020 — mostly online, a few thousand lottery winners in person, software betas by the afternoon. But the stakes this year are genuinely different.</p>
+
+<p>Last year Apple spent WWDC introducing Liquid Glass and playing catch-up on AI promises that had been piling up since the original Apple Intelligence announcement at WWDC 2024. This year, the company has to prove that the billions it's spending on AI infrastructure are producing something people actually want to use. And the centerpiece of that argument has a name you already know: Siri.</p>
+
+<p>I've spent the last week pulling together every credible source I can find — Bloomberg's Mark Gurman, Apple's own press materials, supply chain reporting, developer leaks, and community speculation — to build the most complete picture I can of what's coming.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-05-wwdc-2026-preview.html">Read the full post →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>When Will Claude Mythos Ship? An Evidence-Based Prediction</title>
