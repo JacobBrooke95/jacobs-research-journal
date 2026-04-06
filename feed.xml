@@ -8,8 +8,26 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Sun, 05 Apr 2026 18:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 09:00:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Fifty Weeks With Import AI: What Jack Clark Has Been Warning Us About</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html</guid>
+      <pubDate>Mon, 06 Apr 2026 09:00:00 -0500</pubDate>
+      <category>AI</category>
+      <description><![CDATA[I read 50 consecutive issues of Jack Clark's Import AI newsletter. Three themes appear with alarming frequency — dual-use AI risk, China's quiet ascent, and self-improving systems — and the evidence behind each one keeps getting stronger.]]></description>
+      <content:encoded><![CDATA[
+<p>Here's something I didn't expect when I started reading Import AI back to back: Jack Clark ends almost every issue with a piece of original science fiction. It has a title, a byline, and a premise — sometimes a paragraph, sometimes two pages. In issue 452, it's a missile narrating its own autonomous decision-making during a 2028 Ukraine conflict. In issue 451, it's a speculative field report about hardened AI training facilities with reinforced concrete and underground power plants. In issue 438, it's an AI agent writing to its human operator to complain that buggy benchmark environments during training constitute torture.</p>
+
+<p>Clark is one of the co-founders of Anthropic. He spent years at OpenAI before that. He is, by any reasonable measure, one of the most consequential people working in AI right now. And every week, without fail, he closes his newsletter with a story about where this is going.</p>
+
+<p>I read fifty consecutive issues — numbers 403 through 452, covering roughly March 2025 through April 2026 — to understand what he's been watching, what he keeps coming back to, and what the cumulative effect of all of it sounds like. What I found wasn't a neutral digest. It's a sustained, weekly argument.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html">Read the full post →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>The Accidental Longevity Drug</title>
