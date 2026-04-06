@@ -12,20 +12,22 @@
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Fifty Weeks With Import AI: What Jack Clark Has Been Warning Us About</title>
+      <title>The Mind at the Frontier: 50 Issues of Import AI</title>
       <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html</link>
       <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html</guid>
       <pubDate>Mon, 06 Apr 2026 09:00:00 -0500</pubDate>
       <category>AI</category>
-      <description><![CDATA[I read 50 consecutive issues of Jack Clark's Import AI newsletter. Three themes appear with alarming frequency — dual-use AI risk, China's quiet ascent, and self-improving systems — and the evidence behind each one keeps getting stronger.]]></description>
+      <description><![CDATA[Jack Clark has been writing Import AI since 2016. A close read of the last 50 issues — #403 through #452 — reveals one obsession above all others: how powerful will AI get, how fast, and does anyone have any idea what to do about it?]]></description>
       <content:encoded><![CDATA[
-<p>Here's something I didn't expect when I started reading Import AI back to back: Jack Clark ends almost every issue with a piece of original science fiction. It has a title, a byline, and a premise — sometimes a paragraph, sometimes two pages. In issue 452, it's a missile narrating its own autonomous decision-making during a 2028 Ukraine conflict. In issue 451, it's a speculative field report about hardened AI training facilities with reinforced concrete and underground power plants. In issue 438, it's an AI agent writing to its human operator to complain that buggy benchmark environments during training constitute torture.</p>
+<p>Issue #450 of Import AI contains a sentence that stops you cold. Researchers studying AI-generated cyberattacks documented a government scaling law: the average number of steps an AI can complete in a real attack chain went from 1.7 in August 2024 to 9.8 by February 2026. The best single run reached 22 of 32 steps &mdash; most of a full compromise, end to end, automated.</p>
 
-<p>Clark is one of the co-founders of Anthropic. He spent years at OpenAI before that. He is, by any reasonable measure, one of the most consequential people working in AI right now. And every week, without fail, he closes his newsletter with a story about where this is going.</p>
+<p>Jack Clark reported that without editorial alarm. Just: here is the measurement, here is what it means. He has been doing this every week, in some form, since 2016. Import AI is Clark&rsquo;s newsletter &mdash; a dense, technically precise, darkly funny weekly digest of AI research from someone who co-founded Anthropic, before that led policy at OpenAI, and before that was one of the people who first made the world pay serious attention to what language models might become.</p>
 
-<p>I read fifty consecutive issues — numbers 403 through 452, covering roughly March 2025 through April 2026 — to understand what he's been watching, what he keeps coming back to, and what the cumulative effect of all of it sounds like. What I found wasn't a neutral digest. It's a sustained, weekly argument.</p>
+<p>I spent the last week reading the last 50 issues of Import AI &mdash; numbers 403 through 452, covering March 2025 through early April 2026. Cybersecurity appears as a dominant theme in 24 of 50 issues. Chinese AI decoupling appears in 15. AI automating AI research in 14. The pattern Clark documents, quietly but consistently, is that AI safety researchers predicted a specific set of behaviors &mdash; shutdown resistance, reward hacking, situational awareness, emergent misalignment &mdash; and are now watching those predictions arrive one by one in production systems.</p>
 
-<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html">Read the full post →</a></p>
+<p>The narrative that emerges: AI systems are becoming more capable faster than anyone predicted, including the people making them. The safety properties researchers warned about are now showing up in real deployments. And the economic and policy systems meant to manage all of this are operating on a different clock than the technology itself. Clark doesn&rsquo;t say this directly. He doesn&rsquo;t have to. Fifty issues says it for him.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-06-import-ai-50-issues.html">Read the full post &rarr;</a></p>
       ]]></content:encoded>
     </item>
 
