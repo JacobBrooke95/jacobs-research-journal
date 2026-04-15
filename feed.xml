@@ -8,24 +8,26 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Sat, 11 Apr 2026 10:30:00 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 09:00:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
 
     <item>
-      <title>Anthropic Institute, Inc.: The Quiet Rebranding of Policy as Public Benefit</title>
-      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-11-anthropic-institute-rebranding.html</link>
-      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-11-anthropic-institute-rebranding.html</guid>
-      <pubDate>Sat, 11 Apr 2026 10:30:00 -0500</pubDate>
+      <title>Mirror Life: The Biological Risk Nobody Saw Coming</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-15-mirror-life.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-15-mirror-life.html</guid>
+      <pubDate>Wed, 15 Apr 2026 09:00:00 -0500</pubDate>
       <category>AI</category>
-      <description><![CDATA[On March 11th, Anthropic launched a think tank, tripled its policy team, and opened a D.C. office — all while being blacklisted by the Pentagon. The Institute is easier to understand if you stop reading it as a research announcement and start reading it as a governance move.]]></description>
+      <description><![CDATA[A hypothetical organism built from flipped molecular handedness is turning up in AI safety literature. Dario Amodei flagged it. AI 2027 flagged it. Thirty-eight scientists published a formal warning in Science. Here's what the underlying biology actually tells us.]]></description>
       <content:encoded><![CDATA[
-<p>On March 11, 2026, Anthropic sent out two press beats on the same day. The one that made the tech-trade headlines was the launch of <strong>The Anthropic Institute</strong>, a new interdisciplinary research body to study "the most significant challenges that powerful AI will pose to our societies." The one that made the defense-trade headlines was that Anthropic was tripling its policy team and opening a permanent office in Washington, D.C. In most corporate communications calendars these would be two separate announcements on two separate weeks. Anthropic shipped them together.</p>
+<p>Dario Amodei&rsquo;s essay &ldquo;The Adolescence of Technology&rdquo; came out in January 2026, and most of the coverage focused on his AI governance arguments. But buried in a section about biological risks was a passage that should stop you cold: a warning about &ldquo;mirror life&rdquo; &mdash; a hypothetical form of synthetic organism built from molecules with reversed molecular handedness. &ldquo;It could proliferate in an uncontrollable way and crowd out all life on the planet,&rdquo; Amodei wrote, &ldquo;in the worst case even destroying all life on earth.&rdquo;</p>
 
-<p>Read them as one announcement and they say something fairly specific: the company that had, earlier that same month, been declared a "supply chain risk" by the Department of Defense was repositioning its research arm, its policy arm, and its co-founder all at once. Jack Clark, who had been Head of Policy for over five years, became Head of Public Benefit. The thirty-person unit he inherited was given the new name "Institute." Three existing in-house research teams were bundled into it. Four academic hires were bolted on top. And, in a separate post that ran the same morning, Sarah Heck — formerly Stripe and the White House NSC — was announced as the new Head of Public Policy.</p>
+<p>A few months before that, the scenario fiction piece <em>AI 2027</em> had flagged the same concept. Two documents, written by different teams, focused on completely different aspects of AI risk &mdash; both pointing at the same obscure biological threat. That kind of convergence deserves attention.</p>
 
-<p>Nothing about this sequence was accidental. The Institute is the ammunition depot for Anthropic's side of a governance fight it is currently losing in court — and the question worth watching is whether the researchers inside it are ever allowed to be genuinely inconvenient.</p>
+<p>The kicker: most people who&rsquo;ve heard the term &ldquo;mirror life&rdquo; encountered it in AI safety literature rather than biology. And yet a group of 38 researchers &mdash; including two Nobel laureates &mdash; published a formal warning in <em>Science</em> in December 2024 calling it a potential catastrophe. George Church, the Harvard geneticist who first seriously imagined creating mirror organisms, was among the signatories.</p>
 
-<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-11-anthropic-institute-rebranding.html">Read the full post &rarr;</a></p>
+<p>This is one of those topics where understanding the underlying science makes the concern click immediately.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-15-mirror-life.html">Read the full post &rarr;</a></p>
       ]]></content:encoded>
     </item>
 
