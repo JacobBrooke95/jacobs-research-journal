@@ -8,8 +8,32 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Wed, 15 Apr 2026 09:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2026 09:00:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Anthropic's Universes Program: The Billion-Dollar Gym</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-25-anthropic-universes-program.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-25-anthropic-universes-program.html</guid>
+      <pubDate>Sat, 25 Apr 2026 09:00:00 -0500</pubDate>
+      <category>AI</category>
+      <description><![CDATA[Anthropic is spending $1 billion building simulated worlds where AI models learn to act. The Universes team is hiring at $850K. Here's what the job listings, industry reporting, and investment math actually tell us.]]></description>
+      <content:encoded><![CDATA[
+<p>Anthropic is paying $850,000 a year for someone to build fake offices. That&rsquo;s the top of the salary band for &ldquo;Research Engineer, Universes&rdquo; &mdash; a job listing that first appeared in January 2026, says almost nothing about what the work actually involves, and has been quietly sitting open for three months. The listing is one of the most revealing documents Anthropic has published, and they probably didn&rsquo;t mean it to be.</p>
+
+<p>The Universes team is an internal research group responsible for building the next generation of training environments &mdash; reinforcement learning gyms &mdash; where AI models learn to perform complex, long-horizon tasks in simulated settings. There&rsquo;s been no blog post, no press release, no Dario essay. Just a Greenhouse listing and a trail of industry reporting that, when you pull it together, describes something genuinely ambitious.</p>
+
+<h2>What We&rsquo;re Actually Talking About</h2>
+
+<p>Reinforcement learning needs environments the way athletes need gyms. You can&rsquo;t train a model to navigate a complex software workflow by showing it examples &mdash; you need to drop it into a realistic simulation of that workflow and let it try, fail, and iterate thousands of times. The quality of the environment determines the ceiling of the model&rsquo;s capability. Build a bad gym, get a bad athlete.</p>
+
+<p>The investment numbers are staggering. The Information reported that Anthropic has discussed spending <strong>$1 billion over the next year</strong> to build these environments. OpenAI projects roughly $1 billion in data costs for 2025, rising to $8 billion by 2030. Surge, a company that builds RL environments for the major labs, reportedly generated $1.2 billion in revenue last year from this work alone.</p>
+
+<p>Whether the bet pays off will determine what Claude can do in a year. If the Universes team succeeds, the models that emerge won&rsquo;t just answer questions about work &mdash; they&rsquo;ll do work.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-25-anthropic-universes-program.html">Read the full post &rarr;</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>Mirror Life: The Biological Risk Nobody Saw Coming</title>
