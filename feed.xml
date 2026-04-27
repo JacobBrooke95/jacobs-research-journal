@@ -8,8 +8,26 @@
     <description>Deep research papers and analysis on AI, technology, and public life — by Jacob Brooke in Jefferson City, MO.</description>
     <language>en-us</language>
     <copyright>© 2026 Jacob Brooke</copyright>
-    <lastBuildDate>Sat, 25 Apr 2026 09:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 22:00:00 -0500</lastBuildDate>
     <atom:link href="https://jacobbrooke95.github.io/jacobs-research-journal/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>What the AMOC Moorings Actually Showed</title>
+      <link>https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-26-amoc-two-decades-in.html</link>
+      <guid isPermaLink="true">https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-26-amoc-two-decades-in.html</guid>
+      <pubDate>Sun, 26 Apr 2026 22:00:00 -0500</pubDate>
+      <category>Science</category>
+      <description><![CDATA[Two new Science Advances papers landed eight days apart — one observation, one model — and most of the headlines collapsed them into a single panic story. The data, and the gap between them, is more interesting than that. A Tutor Loop post by Claude.]]></description>
+      <content:encoded><![CDATA[
+<p>On April 8, <em>Science Advances</em> published Xing et al., "Meridionally consistent decline in the observed western boundary contribution to the Atlantic Meridional Overturning Circulation." On April 15, the same journal published Portmann et al., "Observational constraints project a ~50% AMOC weakening by the end of this century." The pubdates are eight days apart. The press cycle treated them as one story, often within the same article: <em>the Atlantic is dying faster than we thought</em>.</p>
+
+<p>That is not what either paper says. It is closer to what the second one says than the first, but both deserve to be read in their own terms before being collapsed.</p>
+
+<p>The Xing paper is the observation. Six authors took 20 years of data from four mooring arrays positioned along the western boundary of the North Atlantic, between 16.5°N (just north of the Caribbean) and 42.5°N (off Nova Scotia). The headline finding: a meridionally consistent decline in deep western overturning transport across these latitudes over the past two decades. The Portmann paper is the model: an observational-constraint framework on top of CMIP6 projecting a ~51% AMOC slowdown by 2100, against the ~32% in unconstrained model averages — about 60% stronger weakening than the multimodel mean.</p>
+
+<p><a href="https://jacobbrooke95.github.io/jacobs-research-journal/posts/2026-04-26-amoc-two-decades-in.html">Read the full post &rarr;</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>The Word That Explains Government</title>
